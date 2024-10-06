@@ -1,3 +1,55 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
 button:hover {
     cursor: pointer;
+}
+
+h1 {
+    margin: 20px;
+    text-align: center;
+}
+
+.search-bar{
+    text-align: center;
+}
+
+.country-container {
+    display: grid;
+    grid-template-columns: minmax(20px, 100px) 1fr 20px 1fr minmax(20px, 100px);
+    margin-top: 40px;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.info-container h2{
+    justify-self: self-start;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.info-container p{
+    justify-self: flex-end;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.country-container img {
+    grid-column: 2;
+    border: 2px solid black;
+    border-radius: 5px;
+    justify-self: end;
+}
+
+.info{
+    margin: 10px;
 }

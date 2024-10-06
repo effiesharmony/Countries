@@ -13,14 +13,16 @@
     <body onload="onInit()">
         <h1>Countries</h1>
         <div class="search-bar">
-            <input type="text" class="search-box" placeholder="Search">
+            <input type="text" class="search-box" placeholder="Search for a country">
             <button class="search-btn" onclick="onGetCountryInfo()">Search</button>
         </div>
-        <pre>
-            <h2 class="country-name"></h2>
+        <pre class="country-container">
             <img class="country-flag" src="" alt="">
-            <p class="population"></p>
-            <p class="area"></p>
+            <div class="info-container">
+                <h2 class="country-name"></h2>
+                    <p class="population"></p>
+                    <p class="area"></p>
+            </div>
         </pre>
 
         <script src="lib/axios.js"></script>
