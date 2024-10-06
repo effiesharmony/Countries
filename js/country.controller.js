@@ -5,7 +5,11 @@ function onInit() {
 }
 
 function renderInfo(data) {
-    document.querySelector('.pre').innerHTML = JSON.stringify(data, null, 2)
+    document.querySelector('.country-name').innerHTML = data.name.common
+    document.querySelector('.country-flag').src = data.flags.png
+    document.querySelector('.country-flag').alt = data.flags.alt
+    document.querySelector('.population').innerHTML = `population: ${data.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`
+    document.querySelector('.area').innerHTML = `area: ${data.area} km²`
     console.log(data)
 }
 
