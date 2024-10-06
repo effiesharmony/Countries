@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/countries.css">
-        
-        <title>countries</title>
-    </head>
-    <body onload="onInit()">
-        <h1>Countries</h1>
-        <div class="search-bar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/countries.css">
+
+    <title>countries</title>
+</head>
+
+<body onload="onInit()">
+    <h1>Countries</h1>
+    <div class="search-bar">
             <input type="text" class="search-box" placeholder="Search for a country">
-            <button class="search-btn" onclick="onGetCountryInfo()">Search</button>
+        <button class="search-btn" onclick="onGetCountryInfo()">Search</button>
+    </div>
+    <pre class="country-container">
+        <img class="country-flag" src="" alt="">
+        <div class="info-container">
+            <h2 class="country-name"></h2>
+            <p class="population"></p>
+            <p class="area"></p>
         </div>
-        <pre class="country-container">
-            <img class="country-flag" src="" alt="">
-            <div class="info-container">
-                <h2 class="country-name"></h2>
-                    <p class="population"></p>
-                    <p class="area"></p>
-            </div>
-        </pre>
+    </pre>
+    
+    <script src="lib/axios.js"></script>
+    
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/country.service.js"></script>
+    <script src="js/country.controller.js"></script>
+</body>
 
-        <script src="lib/axios.js"></script>
-        
-        <script src="js/services/storage.service.js"></script>
-        <script src="js/services/country.service.js"></script>
-        <script src="js/country.controller.js"></script>
-    </body>
 </html>
